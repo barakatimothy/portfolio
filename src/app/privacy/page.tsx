@@ -73,7 +73,7 @@ export default function Page() {
         <H2>Contact Us</H2>
         <p>
           If you have any questions about this Privacy Policy, please contact me
-          at barakatimothy39@gmail.com.
+          at timothybaraka39@gmail.com.
         </p>
       </div>
     </section>

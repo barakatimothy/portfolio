@@ -1,5 +1,5 @@
-import OpenAI from "openai";
-import { ChatCompletionMessage } from "openai/resources/chat";
+// import OpenAI from "openai";
+// import { ChatCompletionMessage } from "openai/resources/chat";
 
 export async function POST(req: Request) {
   try {
