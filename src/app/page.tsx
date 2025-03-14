@@ -13,9 +13,9 @@ export default function Home() {
     <main className="space-y-16 bg-[url('/background.png')] bg-cover bg-center bg-no-repeat px-1 py-8">
       <header className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
         <div className="space-y-3">
-          <H1 className="text-center sm:text-start">Hi, I&apos;m Baraka👋</H1>
+          <H1 className="text-center sm:text-start">Hi, I{"'"}m Baraka👋</H1>
           <p className="text-center sm:text-start">
-            I&apos;m a developer from Nairobi passionate about building innovative projects.
+            I{"'"}m a developer from Nairobi passionate about building innovative projects.
           </p>
         </div>
         <div className="flex justify-center">
@@ -38,7 +38,7 @@ export default function Home() {
           seamless user experiences.
         </p>
         <p>
-          Whether it&apos;s <strong>developing full-stack applications, designing interactive dashboards, 
+          Whether it{"'"}s <strong>developing full-stack applications, designing interactive dashboards, 
           or optimizing web performance</strong>, I love solving complex problems with elegant solutions.
         </p>
       </section>
