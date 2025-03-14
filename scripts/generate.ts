@@ -1,19 +1,13 @@
+// @scripts/generate.ts
 import dotenv from "dotenv";
 dotenv.config({ path: ".env.local" });
 // Configure dotenv before other imports
-import { DocumentInterface } from "@langchain/core/documents";
-import { Redis } from "@upstash/redis";
 import { DirectoryLoader } from "langchain/document_loaders/fs/directory";
 import { TextLoader } from "langchain/document_loaders/fs/text";
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import { getEmbeddingsCollection, getVectorStore } from "../src/lib/astradb";
 
 async function generateEmbeddings() {
-  await Redis.fromEnv().flushdb();
-
-  const vectorStore = await getVectorStore();
-
-  (await getEmbeddingsCollection()).deleteMany({});
+  console.log("AI chatbot functionality removed. Running without AI dependencies.");
 
   const loader = new DirectoryLoader(
     "src/app/",
@@ -25,7 +19,7 @@ async function generateEmbeddings() {
 
   const docs = (await loader.load())
     .filter((doc) => doc.metadata.source.endsWith("page.tsx"))
-    .map((doc): DocumentInterface => {
+    .map((doc) => {
       const url =
         doc.metadata.source
           .replace(/\\/g, "/")
@@ -47,8 +41,7 @@ async function generateEmbeddings() {
   const splitter = RecursiveCharacterTextSplitter.fromLanguage("html");
 
   const splitDocs = await splitter.splitDocuments(docs);
-
-  await vectorStore.addDocuments(splitDocs);
+  console.log("Processed documents:", splitDocs.length);
 }
 
 generateEmbeddings();

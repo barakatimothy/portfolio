@@ -1,3 +1,4 @@
+// @lib/astradb.tsx
 import { AstraDB } from "@datastax/astra-db-ts";
 import { AstraDBVectorStore } from "@langchain/community/vectorstores/astradb";
 import { OpenAIEmbeddings } from "@langchain/openai";

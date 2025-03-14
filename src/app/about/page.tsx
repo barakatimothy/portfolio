@@ -1,3 +1,4 @@
+// @app/about/page.tsx
 import bjj from "@/assets/bjj.jpg";
 import { H1 } from "@/components/ui/H1";
 import { H2 } from "@/components/ui/H2";

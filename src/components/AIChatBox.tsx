@@ -1,3 +1,4 @@
+// @components/AIChatBox.tsx
 import { cn } from "@/lib/utils";
 import { Message, useChat } from "ai/react";
 import { Bot, SendHorizontal, Trash, XCircle } from "lucide-react";

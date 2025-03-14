@@ -1,3 +1,4 @@
+// @components/Navbar.tsx
 import Link from "next/link";
 import AIChatButton from "./AIChatButton";
 import ThemeToggle from "./ThemeToggle";

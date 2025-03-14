@@ -1,3 +1,4 @@
+// @components/ui/H1.tsx
 import { cn } from "@/lib/utils";
 
 export function H1(props: React.HTMLProps<HTMLHeadingElement>) {

@@ -1,3 +1,4 @@
+// @components/AIChatButton.tsx
 "use client";
 
 import { Bot } from "lucide-react";

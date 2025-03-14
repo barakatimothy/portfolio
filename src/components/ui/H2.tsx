@@ -1,3 +1,4 @@
+// @components/ui/H2.tsx
 import { cn } from "@/lib/utils";
 
 export function H2(props: React.HTMLProps<HTMLHeadingElement>) {
