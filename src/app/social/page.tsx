@@ -21,7 +21,7 @@ export default function Page() {
         <ul className="list-inside list-disc space-y-1">
           <li>
             <a
-              href="https://www.youtube.com/codinginflow?sub_confirmation=1"
+              href="https://www.youtube.com/@barakatimothy9798"
               className="text-primary hover:underline"
             >
               YouTube
