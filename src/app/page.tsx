@@ -40,7 +40,7 @@ export default function Home() {
     seamless user experiences.
   </p>
   <p>
-    Whether it's <strong>developing full-stack applications, designing interactive dashboards, 
+    Whether its <strong>developing full-stack applications, designing interactive dashboards, 
     or optimizing web performance</strong>, I love solving complex problems with elegant solutions.
   </p>
 </section>
