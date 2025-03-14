@@ -32,14 +32,19 @@ export default function Home() {
         </div>
       </section>
       <section className="space-y-3 text-center">
-        <H2>Ask the chatbot anything about me</H2>
-        <p>
-          Click the little <Bot className="inline pb-1" /> icon in the top bar
-          to activate the AI chat. You can ask the chatbot any question about me
-          and it will find the relevant info on this website. The bot can even
-          provide links to pages you&apos;re looking for.
-        </p>
-      </section>
+  <H2>More About Me</H2>
+  <p>
+    I specialize in <strong>building scalable web applications</strong> with a focus on 
+    <strong>clean code, intuitive design, and high performance</strong>. I enjoy working with 
+    React, Next.js, Tailwind CSS, and backend technologies to create 
+    seamless user experiences.
+  </p>
+  <p>
+    Whether it's <strong>developing full-stack applications, designing interactive dashboards, 
+    or optimizing web performance</strong>, I love solving complex problems with elegant solutions.
+  </p>
+</section>
+
     </section>
   );
 }
