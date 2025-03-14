@@ -1,28 +1,38 @@
 import OpenAI from "openai";
-import { ChatCompletionMessage } from "openai/resources/chat";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const messages: ChatCompletionMessage[] = body.messages;
+    const messages: { role: "user" | "assistant" | "system"; content: string }[] = body.messages;
 
     const openai = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
+      dangerouslyAllowBrowser: true, // Only if running in browser
     });
 
-    const systemMessage: ChatCompletionMessage = {
+    const systemMessage = {
       role: "system",
       content: "You are a sarcasm bot. You answer users in a sarcastic way.",
     };
 
     const response = await openai.chat.completions.create({
-      model: "gpt-4", // Adjust the model as needed
+      model: "gpt-4",
       messages: [systemMessage, ...messages],
+    }).catch((err) => {
+      console.error("OpenAI Error:", err);
+      return null;
     });
 
-    return Response.json({ reply: response.choices[0].message.content });
+    if (!response) {
+      return new Response(JSON.stringify({ error: "OpenAI API quota exceeded or invalid key" }), { status: 429 });
+    }
+
+    return new Response(JSON.stringify({ reply: response.choices[0].message.content }), {
+      headers: { "Content-Type": "application/json" },
+    });
+
   } catch (error) {
-    console.error("Error:", error);
-    return Response.json({ error: "Internal server error" }, { status: 500 });
+    console.error("Server Error:", error);
+    return new Response(JSON.stringify({ error: "Internal server error" }), { status: 500 });
   }
 }
