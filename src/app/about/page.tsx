@@ -59,7 +59,7 @@ export default function Page() {
           </li>
           <li>
             <Link
-              href="https://afyaonthego."
+              href="https://www.afyaotg.com/"
               className="text-primary hover:underline"
             >
               Afya on the go
