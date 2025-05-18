@@ -54,7 +54,7 @@ export default function Page() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/timothy-baraka-45490b1b0/"
+              href="https://www.linkedin.com/in/baraka-timothy-b8ba55355/"
               className="text-primary hover:underline"
             >
               LinkedIn
